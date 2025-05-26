@@ -21,6 +21,8 @@ class dokter{
     public:
     string nama;
     vector<pasien *> daftar_pasien;
+
+
     dokter(string pNama) : nama(pNama) {
         cout <<"dokter\"" << nama <<"\" ada\n";
     }
@@ -31,3 +33,7 @@ class dokter{
     void cetakPasien();
     
 };
+
+void pasien::tambahDokter(dokter* pDokter) {
+    daftar_dokter.push_back(pDokter);
+}
